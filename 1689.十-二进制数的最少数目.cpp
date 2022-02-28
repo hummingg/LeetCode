@@ -5,12 +5,27 @@
  */
 #include <iostream>
 #include <vector>
+#include <set>
 #include <algorithm> 
 using namespace std;
 // @lc code=start
 class Solution {
 public:
+    // 脑筋急转弯!
     int minPartitions(string n) {
+        int maxNum = 1;
+        for(int i = 0; i < n.size(); i++){
+            int num = n[i] - '0';
+            if(num == 9){
+                return 9;
+            }else{
+                maxNum = maxNum > num ? maxNum : num;
+            }
+        }
+        return maxNum;
+    }
+
+    int minPartitions3(string n) {
         set<int> all;
         vector<int> exist;
         for(int i = 0; i < 10; i++){
@@ -35,7 +50,7 @@ public:
     }
 
     // 93 81;
-    int minPartitions(string n) {
+    int minPartitions2(string n) {
         int nums[10] = {};  // 全部初始化为0,统计出现0-9各自的出现次数
         for(int i = 0; i < n.length(); i++){
             int num = n[i] - '0';
