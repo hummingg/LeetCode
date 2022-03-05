@@ -27,33 +27,45 @@ struct TreeNode {
  * };
  */
 class Solution {
+private:
+    int rightSum = 0;   // ≥当前结点值 的结点值之和
 public:
-    // 逆中序遍历
+    // 同 538 题
+    // 17 78;
     TreeNode* bstToGst(TreeNode* root) {
-        TreeNode *p = root;
         // stack<TreeNode*> stk;
         // midOrder(root, stk);
-        
+        // ...
+
+        inverseMidOrder(root);
         return root;
     }
-
-    int inverseMidOrder(TreeNode* root, int sum){
-        
-        return sum;
-    }
-
-    void midOrder(TreeNode* root, stack<TreeNode*>& stk){
+    
+    // 逆中序遍历
+    void inverseMidOrder(TreeNode* root){
         if(!root){
             return;
         }
-        if(root->left){
-            midOrder(root->left, stk);
-        }
-        stk.push(root);
-        if(root->right){
-            midOrder(root->right, stk);
-        }
+        inverseMidOrder(root->right);
+        rightSum += root->val;
+        root->val = rightSum;
+        // cout << rightSum << endl;
+        inverseMidOrder(root->left);
     }
+
+    // 中序遍历
+    // void midOrder(TreeNode* root, stack<TreeNode*>& stk){
+    //     if(!root){
+    //         return;
+    //     }
+    //     if(root->left){
+    //         midOrder(root->left, stk);
+    //     }
+    //     stk.push(root);
+    //     if(root->right){
+    //         midOrder(root->right, stk);
+    //     }
+    // }
 };
 // @lc code=end
 

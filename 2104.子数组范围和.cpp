@@ -9,7 +9,7 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
-    // n n
+    // 方法二：n n
     // long long subArrayRanges(vector<int>& nums) {
     //     int size = nums.size();
     //     long long sum = 0;
@@ -20,7 +20,7 @@ public:
     //     return sum;
     // }
 
-    // n^2 1
+    // 方法一：n^2 1
     // 90 92;
     long long subArrayRanges1(vector<int>& nums) {
         int size = nums.size();
