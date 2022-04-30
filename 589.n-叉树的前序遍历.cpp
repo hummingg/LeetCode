@@ -49,7 +49,7 @@ public:
 class Solution {
 public:
     // 进阶迭代
-    // 28 95;
+    // 28 95; 94 69;
     vector<int> preorder(Node* root) {
         if(!root){
             return {};

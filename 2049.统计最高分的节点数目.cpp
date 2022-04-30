@@ -266,18 +266,17 @@ public:
         return s;
     }
 };
-// int main(){
-//     vector<int> v = {-1,0,17,6,16,16,17,19,6,4,2,1,5,11,3,10,1,0,20,11,2};
-//     // cout << v << endl;
-//     // // return 0;
-//     // for(int i = 0; i < v.size(); i++){
-//     //     cout << i << " "  << v[i]<< endl;
-//     // }
-//     Solution s;
-//     cout << s.countHighestScoreNodes(v) << endl;
-//     // set<int> st = {1, 2, 6, 11, 16, 17};
-//     // cout << s.clearParents(st, v) << endl;
-//     return 0;
-// }
 // @lc code=end
-
+int main(){
+    vector<int> v = {-1,0,17,6,16,16,17,19,6,4,2,1,5,11,3,10,1,0,20,11,2};
+    // cout << v << endl;
+    // // return 0;
+    // for(int i = 0; i < v.size(); i++){
+    //     cout << i << " "  << v[i]<< endl;
+    // }
+    Solution s;
+    cout << s.countHighestScoreNodes(v) << endl;
+    // set<int> st = {1, 2, 6, 11, 16, 17};
+    // cout << s.clearParents(st, v) << endl;
+    return 0;
+}

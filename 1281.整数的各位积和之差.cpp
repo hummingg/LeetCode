@@ -7,14 +7,14 @@
 // @lc code=start
 class Solution {
 public:
-// 100 22;100 80;
+// 100 22; 100 80; 100 68;
     int subtractProductAndSum(int n) {
         int sum = 0, mul = 1;
         do{
             int low = n % 10;
             sum += low;
             mul *= low;
-            n = n / 10;
+            n /= 10;
         }while(n > 0);
         return mul - sum;
     }

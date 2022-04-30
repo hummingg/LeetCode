@@ -31,7 +31,7 @@ public:
     // 卡特兰数
     // 每个位置都要满足 左>=右
     // n个左括号用完就确定了
-    // 23 86;
+    // 23 86; 23 85;
     vector<string> generateParenthesis(int n) {
         // set<string> v;
         set<string> st;
