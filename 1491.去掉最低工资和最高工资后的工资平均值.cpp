@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 100 97;
+    // 100 97; 9 46;
     double average(vector<int>& salary) {
         int maxSalary = *max_element(salary.begin(), salary.end());
         int minSalary = *min_element(salary.begin(), salary.end());

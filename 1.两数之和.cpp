@@ -12,16 +12,17 @@ using namespace std;
 
 class Solution {
 public:
+    // 92 19; 92 16;
     vector<int> twoSum(vector<int>& nums, int target) {
         map<int, int> mValueIndex;
-        vector<int> indexs;
+        vector<int> indexs(2, 0);
 
         for (int i = 0; i < nums.size(); i++){
             int pair = target-nums[i];
             auto it = mValueIndex.find(pair);
             if(it != mValueIndex.end()){
-                indexs.push_back(mValueIndex[pair]);
-                indexs.push_back(i);
+                indexs[0] = mValueIndex[pair];
+                indexs[1] = i;
                 break;
             }else{
                 mValueIndex.insert(make_pair(nums[i], i));

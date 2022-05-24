@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 81 57;
+    // 81 57;81 62;
     int diagonalSum(vector<vector<int>>& mat) {
         int size = mat.size();
         int sum = 0;

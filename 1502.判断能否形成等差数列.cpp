@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 100 52;
+    // 100 52; 100 52;
     bool canMakeArithmeticProgression(vector<int>& arr) {
         int size = arr.size();
         if(size < 3){

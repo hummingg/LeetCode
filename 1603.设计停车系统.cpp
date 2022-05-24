@@ -7,7 +7,7 @@
 // @lc code=start
 class ParkingSystem {
 private:
-int bigLeft, mediumLeft, smallLeft;
+    int bigLeft, mediumLeft, smallLeft;
 public:
     // 42 78;
     ParkingSystem(int big, int medium, int small) {
@@ -17,31 +17,30 @@ public:
     }
     
     bool addCar(int carType) {
-        bool in = false;
-        switch (carType)
-        {
-        case 1:
-            if(bigLeft > 0){
-                bigLeft--;
-                in = true;
-            }
-            break;
-        case 2:
-            if(mediumLeft > 0){
-                mediumLeft--;
-                in = true;
-            }
-            break;
-        case 3:
-            if(smallLeft > 0){
-                smallLeft--;
-                in = true;
-            }
-            break;
-        default:
-            break;
+        bool added = false;
+        switch (carType){
+            case 1:
+                if(bigLeft > 0){
+                    bigLeft--;
+                    added = true;
+                }
+                break;
+            case 2:
+                if(mediumLeft > 0){
+                    mediumLeft--;
+                    added = true;
+                }
+                break;
+            case 3:
+                if(smallLeft > 0){
+                    smallLeft--;
+                    added = true;
+                }
+                break;
+            default:
+                break;
         }
-        return in;
+        return added;
     }
 };
 

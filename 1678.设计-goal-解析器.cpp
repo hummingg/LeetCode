@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-// 100 19;
+    // 100 19; 100 83;
     string interpret(string command) {
         string ret = "";
         for(int i = 0; i < command.size();){

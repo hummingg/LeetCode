@@ -55,25 +55,23 @@
 // @lc code=start
 class Solution {
 public:
-    // 40 87;
+    // 40 87; 99 98; 40 87; 86 35;
     vector<vector<int>> matrixReshape(vector<vector<int>>& mat, int r, int c) {
         int m = mat.size(), n = mat[0].size();
-        // if(m * n < r * c || m == r && n == c){
+        // if(m * n < r * c || m == r && n == c){   // 理解错误
         if(m * n != r * c || m == r && n == c){
             return mat;
         }
         vector<vector<int>> ret(r, vector<int>(c, 0));
         int row = 0, col = 0;
-        for(int i = 0; i < m && row < r; ++i){
-            for(int j = 0; j < n && row < r; ++j){
-                // if(col < c){
-                    ret[row][col] = mat[i][j];
-                    ++col;
-                    if(col == c){
-                        ++row;
-                        col = 0;
-                    }
-                // }
+        for(int i = 0; i < m; ++i){
+            for(int j = 0; j < n; ++j){
+                ret[row][col] = mat[i][j];
+                ++col;
+                if(col == c){
+                    ++row;
+                    col = 0;
+                }
             }
         }
         return ret;

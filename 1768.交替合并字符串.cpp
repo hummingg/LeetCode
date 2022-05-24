@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 100 61;
+    // 100 61; 100 43;
     string mergeAlternately(string word1, string word2) {
         string ret = "";
         int minSize = min(word1.size(), word2.size());

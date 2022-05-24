@@ -62,7 +62,7 @@ template <class T> std::ostream& operator<< (std::ostream& out, const std::vecto
 // @lc code=start
 class Solution {
 public:
-    // 36 22;
+    // 36 22; 87 55;
     void moveZeroes(vector<int>& nums) {
         int size = nums.size(), count = 0;
         for(int i = 0; i < size; ++i){
@@ -79,7 +79,6 @@ public:
                 if(end != i){
                     nums[end] = nums[i];
                 }
-                // --count;
                 ++end;
             }
         }

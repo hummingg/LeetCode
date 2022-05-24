@@ -59,23 +59,35 @@
 // @lc code=start
 class Solution {
 public:
+    // 86 27; 100 42;
     bool isAlienSorted(vector<string>& words, string order) {
-        map<char, int> m;
+        unordered_map<char, int> m;
         for(int i = 0; i < order.size(); ++i){
             m[order[i]] = i;
         }
+        // cout<<m[0x00]<<endl;    // 默认 0
         for(int i = 0; i < words.size()-1; ++i){
             string first = words[i];
             string second = words[i+1];
             int j = 0;
-            for(; j < first.size(); ++j){
+            int size = min(first.size(), second.size());
+            // for(; j < first.size(); ++j){   // 怎么通过的？
+            for(; j < size; ++j){
+                // if(j >= size){
+                //     cout << "越界了" << endl;
+                //     cout << second[j] << endl;  // \x00 == 0x00，\x是转义字符
+                //     cout << to_string(m[second[j]]) << endl;    // 默认 0，原来如此
+                // }
                 if(m[first[j]] < m[second[j]]){
+                    cout << "<<<" << endl;
                     break;
                 }else if(m[first[j]] > m[second[j]]){
+                    // cout << ">>>" << endl;
                     return false;
                 }
             }
-            if(j == first.size() && first.size() > second.size()){
+            // if(j == first.size() && first.size() > second.size()){   // 怎么通过的？
+            if(j == size && first.size() > second.size()){
                 return false;
             }
         }
@@ -86,5 +98,8 @@ public:
 /*
 ["hello","leetcode"]\n"hlabcdefgijkmnopqrstuvwxyz"\n
 ["word","world","row"]\n"worldabcefghijkmnpqstuvxyz"\n
-["apple","app"]\n"abcdefghijklmnopqrstuvwxyz"
+["apple","app"]\n"abcdefghijklmnopqrstuvwxyz"\n
+["app","apple"]\n"abcdefghijklmnopqrstuvwxyz"\n
+["aa","a"]\n"abqwertyuioplkjhgfdszxcvnm"\n
+["hello","hello"]\n"abcdefghijklmnopqrstuvwxyz"
 */

@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 86 43; 34 42;
+    // 86 43; 34 42; 34 44;
     int arraySign(vector<int>& nums) {
         int neg = 0;
         for(int i = 0; i < nums.size(); ++i){

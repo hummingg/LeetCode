@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 20 73;
+    // 20 73; 81 90;
     bool checkStraightLine(vector<vector<int>>& coordinates) {
         int size = coordinates.size();
         if(size < 3){

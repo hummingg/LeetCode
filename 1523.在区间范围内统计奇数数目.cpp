@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 100 18;
+    // 100 18; 100 77;
     int countOdds(int low, int high) {
         // 共 high - low + 1 个数
         if(low % 2 == 0){   // 偶数开头
