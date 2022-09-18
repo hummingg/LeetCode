@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
 public:
-    // 100 6;
+    // 100 6; 100 97 0 5.7;
     string defangIPaddr(string address) {
         string ret;
         for(int i = 0; i < address.size(); i++){

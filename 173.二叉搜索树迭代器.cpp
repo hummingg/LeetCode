@@ -27,8 +27,9 @@ struct TreeNode {
  * };
  */
 
-// 75 89;
+
 class BSTIterator {
+    // 75 89; 8 67 40 23.4;
 private:
     stack<TreeNode*> stk;
     // 得到以root为根的中序最小，同时保存路径

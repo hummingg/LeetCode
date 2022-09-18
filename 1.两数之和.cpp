@@ -34,4 +34,9 @@ public:
 };
 // n n
 // @lc code=end
-
+int main(){
+    vector<int> v = {1,2,3};
+    auto vi = Solution().twoSum(v, 4);
+    cout << vi[0] << " " << vi[1]  << endl;
+    return 0;
+}
